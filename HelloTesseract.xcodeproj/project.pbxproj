@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1828D10B18CEE61100BD48F8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1828D10A18CEE61100BD48F8 /* main.cpp */; };
 		1828D10D18CEE61100BD48F8 /* HelloTesseract.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1828D10C18CEE61100BD48F8 /* HelloTesseract.1 */; };
+		1828D14918CEF01400BD48F8 /* libtesseract.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1828D14718CEF01400BD48F8 /* libtesseract.3.dylib */; };
+		1828D14A18CEF01400BD48F8 /* libtesseract.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1828D14818CEF01400BD48F8 /* libtesseract.3.dylib */; };
+		1828D14C18CEF09100BD48F8 /* liblept.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1828D14B18CEF09100BD48F8 /* liblept.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,9 @@
 		1828D10718CEE61100BD48F8 /* HelloTesseract */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloTesseract; sourceTree = BUILT_PRODUCTS_DIR; };
 		1828D10A18CEE61100BD48F8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1828D10C18CEE61100BD48F8 /* HelloTesseract.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = HelloTesseract.1; sourceTree = "<group>"; };
+		1828D14718CEF01400BD48F8 /* libtesseract.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.3.dylib; sourceTree = "<group>"; };
+		1828D14818CEF01400BD48F8 /* libtesseract.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtesseract.3.dylib; sourceTree = "<group>"; };
+		1828D14B18CEF09100BD48F8 /* liblept.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblept.3.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1828D14C18CEF09100BD48F8 /* liblept.3.dylib in Frameworks */,
+				1828D14A18CEF01400BD48F8 /* libtesseract.3.dylib in Frameworks */,
+				1828D14918CEF01400BD48F8 /* libtesseract.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,9 @@
 		1828D0FE18CEE61100BD48F8 = {
 			isa = PBXGroup;
 			children = (
+				1828D14B18CEF09100BD48F8 /* liblept.3.dylib */,
+				1828D14718CEF01400BD48F8 /* libtesseract.3.dylib */,
+				1828D14818CEF01400BD48F8 /* libtesseract.3.dylib */,
 				1828D10918CEE61100BD48F8 /* HelloTesseract */,
 				1828D10818CEE61100BD48F8 /* Products */,
 			);
@@ -195,6 +207,17 @@
 		1828D11118CEE61100BD48F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/include/tesseract,
+					/opt/local/include/leptonica,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					/Users/apple/graduate/OpenCVWorkspace/HelloTesseract,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -202,6 +225,17 @@
 		1828D11218CEE61100BD48F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/include/tesseract,
+					/opt/local/include/leptonica,
+					/opt/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					/Users/apple/graduate/OpenCVWorkspace/HelloTesseract,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
